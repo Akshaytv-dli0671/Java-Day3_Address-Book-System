@@ -22,7 +22,7 @@ public class AddressBook {
         Scanner s=new Scanner(System.in);
         Contacts contact=searchContact(firstname,lastname);
         if(contact==null){
-            System.out.println("Contact not exists!");
+            System.out.println("\nContact not exists!");
             return;
         }
         else{
@@ -84,14 +84,19 @@ public class AddressBook {
             }
 
             System.out.println("Contact Edited.... \n"+contact);
-
-
-
-
         }
 
-
-
+    }
+    public void DeleteContact(String firstname, String lastname ){
+        Scanner s=new Scanner(System.in);
+        Contacts contact=searchContact(firstname,lastname);
+        if(contact==null){
+            System.out.println("Contact not exists!");
+            return;
+        }else{
+            contactList.remove(contact);
+            System.out.println("\nContact Removed!");
+        }
     }
 
 }

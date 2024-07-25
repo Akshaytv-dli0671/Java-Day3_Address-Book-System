@@ -44,6 +44,13 @@ public class AddressBookMain {
                     String last=s.next();
                     addressBook.editContact(first,last);
                     break;
+                case 3:
+                    System.out.println("Enter first name: ");
+                    String first1=s.next();
+                    System.out.println("Enter last name: ");
+                    String last1=s.next();
+                    addressBook.DeleteContact(first1,last1);
+                    break;
 
 
                 case 6: return;
