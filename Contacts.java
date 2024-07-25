@@ -85,6 +85,6 @@ public class Contacts {
 
     
     public String toString() {
-            return firstName+" "+lastName+"\nAddress:"+Address+"\nCity:"+city+"\nState:"+state+"\nzip:"+zip+"\nPhone number:"+phoneNumber+"\nEmail: "+email;
+            return "Name: "+firstName+" "+lastName+"\nAddress:"+Address+"\nCity:"+city+"\nState:"+state+"\nzip:"+zip+"\nPhone number:"+phoneNumber+"\nEmail: "+email;
     }
 }
