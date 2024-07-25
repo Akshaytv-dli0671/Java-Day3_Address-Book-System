@@ -52,7 +52,33 @@ public class AddressBookMain {
                     addressBook.DeleteContact(first1,last1);
                     break;
 
+                case 4:
+                    System.out.println("Enter Count: ");
+                    int count=s.nextInt();
+                    for(int i=0;i<count;i++){
+                        System.out.println("Enter First Name:");
+                        String firstNameM=s.next();
+                        System.out.println("Enter Last Name:");
+                        String lastNameM=s.next();
+                        System.out.println("Enter Address:");
+                        String addressM=s.next();
+                        System.out.println("Enter City:");
+                        String cityM=s.next();
+                        System.out.println("Enter Zip:");
+                        int zipM=s.nextInt();
+                        System.out.println("Enter State:");
+                        String stateM=s.next();
+                        System.out.println("Enter Phonenumber:");
+                        String phnoM=s.next();
+                        System.out.println("Enter Email:");
+                        String emailM=s.next();
 
+                        Contacts contactsM=new Contacts(firstNameM,lastNameM,addressM,cityM,zipM,stateM,phnoM,emailM);
+                        addressBook.addContact(contactsM);
+                        System.out.println();
+                    }
+                    break;
+                    
                 case 6: return;
                 default:
                     System.out.println("Enter valid input");
