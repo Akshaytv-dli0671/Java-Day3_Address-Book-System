@@ -6,11 +6,11 @@ public class AddressBookMain {
         System.out.printf("Welcome to Address Book!\n");
         do{
 
-            System.out.println("1. Add a new Contact");
+            System.out.println("\n\n1. Add a new Contact");
             System.out.println("2. Edit existing contact");
             System.out.println("3. Delete a contact");
             System.out.println("4. Add Multiple Contacts");
-            System.out.println("5. ");
+            System.out.println("5. Refactor to Add Multiple Address Books");
             System.out.println("6. Exit");
             System.out.println("Enter Your option:");
             Scanner s=new Scanner(System.in);
@@ -37,6 +37,14 @@ public class AddressBookMain {
                     Contacts contacts=new Contacts(firstName,lastName,address,city,zip,state,phno,email);
                     addressBook.addContact(contacts);
                     break;
+                case 2:
+                    System.out.println("Enter first name: ");
+                    String first=s.next();
+                    System.out.println("Enter last name: ");
+                    String last=s.next();
+                    addressBook.editContact(first,last);
+                    break;
+
 
                 case 6: return;
                 default:
