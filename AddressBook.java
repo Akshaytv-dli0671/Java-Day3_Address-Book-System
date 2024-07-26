@@ -99,4 +99,9 @@ public class AddressBook {
         }
     }
 
+    public void Display_Address_Book(){
+        System.out.println(contactList);
+
+    }
+
 }
